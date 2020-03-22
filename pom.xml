@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eu.sia.meda</groupId>
+    <artifactId>meda-bom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- We can't have two parent POMs, so use DependencyManagement to show
+		Maven where the Spring Cloud dependencies are. -->
+    <dependencyManagement>
+        <dependencies>
+            <!--            TODO: required???-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.cloud</groupId>-->
+            <!--                <artifactId>spring-cloud-dependencies</artifactId>-->
+            <!--                <version>${spring-cloud.version}</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
+            <!--            TODO: presente nel meda-arch-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.kafka</groupId>-->
+            <!--                <artifactId>spring-kafka</artifactId>-->
+            <!--                <version>2.4.3.RELEASE</version>-->
+            <!--            </dependency>-->
+            <!--            TODO: verificare se necessaria-->
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-rest</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-event</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-event</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-event-listener</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-transaction</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-jpa</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-error</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-audit</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-utils</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!--        TODO: da controllare se serve-->
+        <!--        <dependency>-->
+        <!--            <groupId>eu.sia.meda</groupId>-->
+        <!--            <artifactId>meda-arch-utils</artifactId>-->
+        <!--            <version>1.0-SNAPSHOT</version>-->
+        <!--            <type>test-jar</type>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+        <!--        TODO: da controllare se serve-->
+        <!--        <dependency>-->
+        <!--            <groupId>eu.sia.meda</groupId>-->
+        <!--            <artifactId>meda-arch-core</artifactId>-->
+        <!--            <version>1.0-SNAPSHOT</version>-->
+        <!--            <type>test-jar</type>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+        <!--        indirect dependency from meda-arch-core-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.security</groupId>-->
+        <!--            <artifactId>spring-security-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+    </dependencies>
+
+</project>
