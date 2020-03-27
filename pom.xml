@@ -92,6 +92,13 @@
                 <artifactId>meda-arch-utils</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-utils</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
