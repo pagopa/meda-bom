@@ -53,6 +53,13 @@
             </dependency>
             <dependency>
                 <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-rest</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-arch-event</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
