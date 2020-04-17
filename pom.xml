@@ -76,6 +76,12 @@
             </dependency>
             <dependency>
                 <groupId>eu.sia.meda</groupId>
+                <artifactId>meda-arch-event-listener</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-arch-transaction</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
