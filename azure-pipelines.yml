@@ -10,6 +10,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'maven'
+    feed: '365c4b5c-1f31-4eac-965c-cfeb415db2fd/4d41e27a-723b-421f-86cf-7ecf6a5776b0'
+    view: '84b3c7d6-6e53-4f1c-a2a0-d6eee42567cb'
+    definition: '0908abb9-b838-418b-97f4-0022387e264b'
+    version: '1.0-snapshot'
+    downloadPath: '$(System.ArtifactsDirectory)'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
