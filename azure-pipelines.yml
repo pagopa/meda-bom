@@ -17,7 +17,7 @@ steps:
     view: '84b3c7d6-6e53-4f1c-a2a0-d6eee42567cb'
     definition: '0908abb9-b838-418b-97f4-0022387e264b'
     version: '1.0-snapshot'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    downloadPath: '$(Pipeline.Workspace)'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
