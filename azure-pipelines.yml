@@ -10,25 +10,23 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: DownloadPackage@1
+- task: DownloadSecureFile@1
+  displayName: 'download settings.xml for Maven'
+  name: settingsxml
   inputs:
-    packageType: 'maven'
-    feed: '365c4b5c-1f31-4eac-965c-cfeb415db2fd/4d41e27a-723b-421f-86cf-7ecf6a5776b0'
-    view: '84b3c7d6-6e53-4f1c-a2a0-d6eee42567cb'
-    definition: '0908abb9-b838-418b-97f4-0022387e264b'
-    version: '1.0-snapshot'
-    files: 'meda-arch/**'
-    downloadPath: '$(Pipeline.Workspace)'
+    secureFile: 'settings.xml'
+    retryCount: '2'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'install'
+    goals: 'clean deploy'
+    options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
     publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    testResultsFiles: 
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
+    mavenAuthenticateFeed: true
+    effectivePomSkip: true
     sonarQubeRunAnalysis: false
