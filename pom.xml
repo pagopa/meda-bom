@@ -145,5 +145,16 @@
         <!--            <scope>test</scope>-->
         <!--        </dependency>-->
     </dependencies>
+	
+<repository>
+  <id>cstar</id>
+  <url>https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 
 </project>
