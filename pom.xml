@@ -166,4 +166,8 @@
         </repository>
     </repositories>
 
+    <scm>
+        <developerConnection>scm:git:https://github.com/pagopa/meda-bom.git</developerConnection>
+    </scm>
+
 </project>
