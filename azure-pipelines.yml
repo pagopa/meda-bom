@@ -7,8 +7,7 @@ trigger:
   branches:
     include:
       - master
-      - develop
-      - features/*
+      - release
   paths:
     include:
       - pom.xml
@@ -20,11 +19,13 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
+variables:
+  isToDeploy: $[and(ne(variables['Build.Reason'], 'PullRequest'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release')))]
 
 stages:
 - stage: Build
   displayName: Build stage
-  jobs:  
+  jobs:
   - job: Build
     displayName: Build
     pool:
@@ -37,10 +38,12 @@ stages:
         secureFile: 'settings.xml'
         retryCount: '2'
     - task: Maven@3
+      displayName: Build and Deploy Artifacts
+      condition: eq(variables.isToDeploy,true)
       inputs:
         mavenPomFile: 'pom.xml'
         goals: 'deploy'
-        options: '-s $(settingsxml.secureFilePath)'
+        options: '-s $(settingsxml.secureFilePath) -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/sia-dds/cstar/_packaging/cstar/maven/v1'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.8'
