@@ -19,7 +19,6 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
-variables:
   isToDeploy: $[and(ne(variables['Build.Reason'], 'PullRequest'), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release')))]
 
 stages:
