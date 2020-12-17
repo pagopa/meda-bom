@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <meda-arch.version>1.0.4</meda-arch.version>
+        <meda-arch.version>1.0.5</meda-arch.version>
     </properties>
 
     <!-- We can't have two parent POMs, so use DependencyManagement to show
