@@ -23,7 +23,8 @@ steps:
       goals: 'deploy'
       options: '-s $(settingsxml.secureFilePath) -DskipTests=true -DaltDeploymentRepository=cstar::default::https://pkgs.dev.azure.com/pagopaspa/cstar-projects/_packaging/cstar/maven/v1'
       javaHomeOption: 'JDKVersion'
-      jdkVersionOption: '1.8'
+      jdkVersionOption: '1.11'
+      jdkArchitectureOption: 'x64'
       mavenVersionOption: 'Default'
       mavenOptions: '-Xmx3072m'
       mavenAuthenticateFeed: true
