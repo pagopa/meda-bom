@@ -10,12 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: DownloadSecureFile@1
-    displayName: 'download settings.xml for Maven'
-    name: settingsxml
-    inputs:
-      secureFile: 'settings-rw.xml'
-      retryCount: '2'
+#  - task: DownloadSecureFile@1
+#    displayName: 'download settings.xml for Maven'
+#    name: settingsxml
+#    inputs:
+#      secureFile: 'settings-rw.xml'
+#      retryCount: '2'
   - task: Maven@3
     displayName: Build and Deploy Artifacts
     inputs:
