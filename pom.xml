@@ -67,17 +67,17 @@
                 <version>${meda-arch.version}</version>
                 <type>test-jar</type>
             </dependency>
-            <dependency>
-                <groupId>eu.sia.meda</groupId>
-                <artifactId>meda-arch-jpa</artifactId>
-                <version>${meda-arch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>eu.sia.meda</groupId>
-                <artifactId>meda-arch-jpa</artifactId>
-                <version>${meda-arch.version}</version>
-                <type>test-jar</type>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>eu.sia.meda</groupId>-->
+<!--                <artifactId>meda-arch-jpa</artifactId>-->
+<!--                <version>${meda-arch.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>eu.sia.meda</groupId>-->
+<!--                <artifactId>meda-arch-jpa</artifactId>-->
+<!--                <version>${meda-arch.version}</version>-->
+<!--                <type>test-jar</type>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-arch-error</artifactId>
