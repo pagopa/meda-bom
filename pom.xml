@@ -4,11 +4,11 @@
 
     <groupId>eu.sia.meda</groupId>
     <artifactId>meda-bom</artifactId>
-    <version>cen-383-rc2</version>
+    <version>2.0.1</version>
     <packaging>pom</packaging>
 
     <properties>
-        <meda-arch.version>cen-383-rc2</meda-arch.version>
+        <meda-arch.version>2.0.0</meda-arch.version>
     </properties>
 
     <!-- We can't have two parent POMs, so use DependencyManagement to show
