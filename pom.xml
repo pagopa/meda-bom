@@ -4,11 +4,11 @@
 
     <groupId>eu.sia.meda</groupId>
     <artifactId>meda-bom</artifactId>
-    <version>2.0.0</version>
+    <version>cen-383-rc2</version>
     <packaging>pom</packaging>
 
     <properties>
-        <meda-arch.version>2.0.0</meda-arch.version>
+        <meda-arch.version>cen-383-rc2</meda-arch.version>
     </properties>
 
     <!-- We can't have two parent POMs, so use DependencyManagement to show
@@ -37,11 +37,6 @@
                 <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-arch-rest</artifactId>
                 <version>${meda-arch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>eu.sia.meda</groupId>
-                <artifactId>meda-arch-rest</artifactId>
-                <version>${meda-arch.version}</version>
                 <type>test-jar</type>
                 <scope>test</scope>
             </dependency>
@@ -64,17 +59,6 @@
             <dependency>
                 <groupId>eu.sia.meda</groupId>
                 <artifactId>meda-arch-event-listener</artifactId>
-                <version>${meda-arch.version}</version>
-                <type>test-jar</type>
-            </dependency>
-            <dependency>
-                <groupId>eu.sia.meda</groupId>
-                <artifactId>meda-arch-jpa</artifactId>
-                <version>${meda-arch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>eu.sia.meda</groupId>
-                <artifactId>meda-arch-jpa</artifactId>
                 <version>${meda-arch.version}</version>
                 <type>test-jar</type>
             </dependency>
